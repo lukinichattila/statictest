@@ -7,5 +7,5 @@ double doubleoperation(double a,double b){
     return(floatsumma(a,b));
 };
 double pioperation(double a){
-    return (pi+a);
+    return (pi+floatsumma(0,a));
 }

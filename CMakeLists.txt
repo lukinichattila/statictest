@@ -39,5 +39,5 @@ add_library( testsourcefiles STATIC ${CMAKE_SOURCE_DIR}/src/operation.cpp
 target_link_libraries(testsourcefiles gtest_main gmock_main) 
 target_include_directories(testsourcefiles PRIVATE ${CMAKE_SOURCE_DIR}/include )                               
 add_executable( teststatictest ${CMAKE_SOURCE_DIR}/maintest.cpp)
-target_link_libraries(teststatictest sourcefiles gtest_main gmock_main)
+target_link_libraries(teststatictest testsourcefiles gtest_main gmock_main)
 target_include_directories(teststatictest PRIVATE ${CMAKE_SOURCE_DIR}/include )
