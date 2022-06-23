@@ -6,7 +6,7 @@ class MockAddition{
     MockAddition()=default;
       MOCK_METHOD2(intsumma, int(int,int));
       MOCK_METHOD2(floatsumma, double(double,double));
-      MOCK_METHOD1(pioperation, double(double));
+
     virtual ~ MockAddition(){ };    
 };
 extern MockAddition *mockadditionpointer;

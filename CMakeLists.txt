@@ -28,11 +28,15 @@ enable_testing()
 # -----------------------------build main program---------------------------
 SET(projectdir ${CMAKE_SOURCE_DIR})
 add_library( sourcefiles STATIC ${CMAKE_SOURCE_DIR}/src/operation.cpp 
-                                ${CMAKE_SOURCE_DIR}/src/addition.cpp)
+                                ${CMAKE_SOURCE_DIR}/src/addition.cpp
+                                ${CMAKE_SOURCE_DIR}/src/substract.cpp
+                                ${CMAKE_SOURCE_DIR}/src/subtractoperation.cpp)
 target_include_directories(sourcefiles PRIVATE ${CMAKE_SOURCE_DIR}/include )
 add_executable( statictest ${CMAKE_SOURCE_DIR}/main.cpp)
 target_link_libraries(statictest sourcefiles)
 target_include_directories(statictest PRIVATE ${CMAKE_SOURCE_DIR}/include )
+
+
 # -----------------------------build test files-----------------------------
 add_library( testsourcefiles STATIC ${CMAKE_SOURCE_DIR}/src/operation.cpp 
                                 ${CMAKE_SOURCE_DIR}/src/mockaddition.cpp)
