@@ -4,7 +4,7 @@ class Substract{
     public:
         Substract(int a,int b)
             :a{a},b{b}{ };
-        int getresult();
+        virtual int getresult();
         ~ Substract (){ };
     private: 
         int a;

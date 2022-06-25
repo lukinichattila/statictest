@@ -4,7 +4,7 @@
 class SubtractOperation{
     public:
         SubtractOperation()=default;
-        int intsubtractoperation(int a,int b);
-        ~ SubtractOperation(){ };
+        virtual  int intsubtractoperation(int a,int b);
+        virtual ~ SubtractOperation(){ };
 };
 #endif
